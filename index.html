@@ -10,27 +10,28 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="p-3 mb-2 bg-secondary text-white text-center">
+    <header class="col-md-12 p-3 mb-2 bg-secondary text-white text-center">
       Weather Dashboard
     </header>
+    <main class="container-fluid">
+      <div class = "row">
+          <div class="col-12 col-md-2 p-2 search-column">
+              <form class = "border p-2" id = "city-search">
+                  <h4>Search City</h2>
+                  <input id="city" type = "text" autofocus = "true" class = "form-input"/>
+                  <button class = "btn btn-secondary" type = "submit">Search</button>
+              </form>
+              <div class = "past-search border" id = "past-search"></div>
+          </div>
+          <div class="col-12 col-md-10">TEST
+          </div>
 
-    <div class="input-group mb-3">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Search City"
-        aria-label="Search City"
-        aria-describedby="button-addon2"
-      />
-      <button
-        class="btn btn-outline-secondary"
-        type="button"
-        id="button-addon2"
-      >
-        Search
-      </button>
-    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
+
