@@ -22,14 +22,22 @@
               <form class = "border p-2" id = "city-search">
                   <h4>Search City</h2>
                   <input id="city" type = "text" autofocus = "true" class = "form-input"/>
-                  <button class = "btn btn-secondary" type = "submit">Search</button>
+                  <button class = "btn btn-secondary" type = "submit" id="searchButton">Search</button>
               </form>
-              <div class = "past-search border" id = "past-search"></div>
+              <ul id="cities-list"></ul>
           </div>
-          <div class="col-12 col-md-10">TEST
+          <div class="col-12 col-md-9" id="current">TEST
+            <div class="current-city"></div>
+            <div class="searched-cities"></div>
           </div>
-
-
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-9 five-day" id="fiveDay"> 5 DAY TEST</div>
+        </div>
+      </div>  
+    </main>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
