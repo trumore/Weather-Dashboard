@@ -1,7 +1,25 @@
 #current {
   background-color: aqua;
+  width: 800px;
+  height: 300px;
+  margin: 0%;
+  margin-left: 20px;
+  border: 1px black;
 }
 
 #fiveDay {
   background-color: blue;
+  width: 800px;
+  height: 200px;
+  margin-left: 270px;
+  margin-top: 20px;
+  border: 1px black;
+}
+
+#city-search {
+  height: fit-content;
+  width: 300px;
+  border: 1px black;
+  margin-left: 5px;
+  margin-right: 20px;
 }
