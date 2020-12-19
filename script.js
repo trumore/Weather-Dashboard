@@ -22,8 +22,20 @@ $(document).ready(function () {
       city +
       "&appid=19a0504277534924261213bbaabf5bbe";
 
+    var queryURL2 =
+      "https:api.openweathermap.org/data/2.5/forecast?q=" +
+      city +
+      "&appid=19a0504277534924261213bbaabf5bbe";
+
     $.ajax({
       url: queryURL,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+    });
+
+    $.ajax({
+      url: queryURL2,
       method: "GET",
     }).then(function (response) {
       console.log(response);
