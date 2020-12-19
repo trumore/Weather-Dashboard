@@ -32,6 +32,12 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       console.log(response);
+      $(".currentName").text(response.name);
+      var adjustedTemp = response.main.temp * (9 / 5) - 459.67;
+      $(".temperature").text("Current Temperature is: " + adjustedTemp + "°F");
+      //need to change the temp return to minimize decimal places
+      $(".humidity").text("Humidity:" + response.main.humidity + "%");
+      $(".wind").text("Wind Speed is: " + response.wind.speed + "MPH");
     });
 
     $.ajax({
