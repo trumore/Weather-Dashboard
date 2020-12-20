@@ -1,14 +1,15 @@
 #current {
-  background-color: aqua;
+  background-color: rgb(177, 223, 223);
   width: 800px;
   height: 300px;
   margin: 0%;
+  margin-bottom: 20px;
   margin-left: 20px;
   border: 1px black;
 }
 
-#fiveDay {
-  background-color: blue;
+#fiveday {
+  background-color: rgb(146, 146, 163);
   width: 800px;
   height: 200px;
   margin-left: 270px;
