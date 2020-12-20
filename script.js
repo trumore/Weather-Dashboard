@@ -152,4 +152,6 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       console.log(response);
+
+      need to add functionality to store and recall added cities to local storage in addition to UV Index
     });*/
