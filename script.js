@@ -5,7 +5,7 @@ $(document).ready(function () {
     $("#cities-list").empty();
     for (var i = 0; i < cities.length; i++) {
       var a = $("<button>");
-      a.addClass("newCity");
+      a.addClass("btn btn-primary newCity");
       a.attr("city-name", cities[i]);
       a.text(cities[i]);
       $("#cities-list").append(a);
@@ -132,7 +132,4 @@ $(document).ready(function () {
       $("#day5image").attr("src", getday5Image);
     });
   });
-  //create var that links queryURL with API Key
-  //get data attribute from search click event to link with a function
-  //includes queryURL + "attr" + APIKey
 });
