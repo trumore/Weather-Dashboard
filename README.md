@@ -11,4 +11,4 @@ link to page: https://trumore.github.io/Weather-Dashboard/
 Screenshot:
 ![weather-dashboard](Assets/weather-dashboard.png)
 
-Credits - Built by Tom Romore and with collaboration by the Columbia FullStack Study Group
+Credits - Built by Tom Rumore and with collaboration by the Columbia FullStack Study Group
