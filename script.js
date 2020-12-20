@@ -1,6 +1,9 @@
 $(document).ready(function () {
   var cities = [];
   var city;
+  var latitude;
+  var longitude;
+  var queryURL3;
   function cityButtons() {
     $("#cities-list").empty();
     for (var i = 0; i < cities.length; i++) {
@@ -32,6 +35,8 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       console.log(response);
+      var latitude = response.coord.lat;
+      var longitude = response.coord.lon;
       $(".currentName").text(response.name);
       var adjustedTemp = response.main.temp * (9 / 5) - 459.67;
       $(".temperature").text(
@@ -134,3 +139,17 @@ $(document).ready(function () {
     console.log("click");
   });
 });
+
+/*working UVindex var queryURL3 =
+      "http://api.openweathermap.org/data/2.5/uvi?lat=" +
+      latitude +
+      "&lon=" +
+      longitude +
+      "&appid=19a0504277534924261213bbaabf5bbe";
+
+    $.ajax({
+      url: queryURL3,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+    });*/
