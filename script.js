@@ -34,10 +34,16 @@ $(document).ready(function () {
       console.log(response);
       $(".currentName").text(response.name);
       var adjustedTemp = response.main.temp * (9 / 5) - 459.67;
-      $(".temperature").text("Current Temperature is: " + adjustedTemp + "°F");
-      //need to change the temp return to minimize decimal places
+      $(".temperature").text(
+        "Current Temperature is: " + adjustedTemp.toFixed(1) + "°F"
+      );
+
       $(".humidity").text("Humidity:" + response.main.humidity + "%");
       $(".wind").text("Wind Speed is: " + response.wind.speed + "MPH");
+      var currentSlide = response.weather[0].icon;
+      var getImage =
+        "http://openweathermap.org/img/wn/" + currentSlide + "@2x.png";
+      $(".currentImage").attr("src", getImage);
     });
 
     $.ajax({
@@ -45,6 +51,65 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       console.log(response);
+      var getDate1 = response.list[0].dt_txt;
+      var showDate1 =
+        getDate1.charAt(5) +
+        getDate1.charAt(6) +
+        "/" +
+        getDate1.charAt(8) +
+        getDate1.charAt(9);
+      $("day1date").text("Date" + showDate1);
+      var futureTempCalc = response.list[0].main.temp * (9 / 5) - 459.67;
+      $(".day1temp").text("Temp: " + futureTempCalc.toFixed(1) + "°F");
+      $(".day1hum").text("Humidity: " + response.list[0].main.humidity + "%");
+
+      var getDate2 = response.list[1].dt_txt;
+      var showDate2 =
+        getDate2.charAt(5) +
+        getDate2.charAt(6) +
+        "/" +
+        getDate2.charAt(8) +
+        getDate2.charAt(9);
+      $("day2date").text("Date" + showDate2);
+      var futureTempCalc = response.list[1].main.temp * (9 / 5) - 459.67;
+      $(".day2temp").text("Temp: " + futureTempCalc.toFixed(1) + "°F");
+      $(".day2hum").text("Humidity: " + response.list[1].main.humidity + "%");
+
+      var getDate3 = response.list[2].dt_txt;
+      var showDate3 =
+        getDate3.charAt(5) +
+        getDate3.charAt(6) +
+        "/" +
+        getDate3.charAt(8) +
+        getDate3.charAt(9);
+      $("day3date").text("Date" + showDate3);
+      var futureTempCalc = response.list[2].main.temp * (9 / 5) - 459.67;
+      $(".day3temp").text("Temp: " + futureTempCalc.toFixed(1) + "°F");
+      $(".day3hum").text("Humidity: " + response.list[2].main.humidity + "%");
+
+      var getDate4 = response.list[3].dt_txt;
+      var showDate4 =
+        getDate4.charAt(5) +
+        getDate4.charAt(6) +
+        "/" +
+        getDate4.charAt(8) +
+        getDate4.charAt(9);
+      $("day4date").text("Date" + showDate4);
+      var futureTempCalc = response.list[3].main.temp * (9 / 5) - 459.67;
+      $(".day4temp").text("Temp: " + futureTempCalc.toFixed(1) + "°F");
+      $(".day4hum").text("Humidity: " + response.list[3].main.humidity + "%");
+
+      var getDate5 = response.list[4].dt_txt;
+      var showDate5 =
+        getDate5.charAt(5) +
+        getDate5.charAt(6) +
+        "/" +
+        getDate5.charAt(8) +
+        getDate5.charAt(9);
+      $("day5date").text("Date" + showDate4);
+      var futureTempCalc = response.list[4].main.temp * (9 / 5) - 459.67;
+      $(".day5temp").text("Temp: " + futureTempCalc.toFixed(1) + "°F");
+      $(".day5hum").text("Humidity: " + response.list[4].main.humidity + "%");
     });
   });
   //create var that links queryURL with API Key
