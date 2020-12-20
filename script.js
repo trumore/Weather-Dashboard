@@ -21,12 +21,12 @@ $(document).ready(function () {
     cities.push(city);
     cityButtons();
     var queryURL =
-      "https:api.openweathermap.org/data/2.5/weather?q=" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&appid=19a0504277534924261213bbaabf5bbe";
 
     var queryURL2 =
-      "https:api.openweathermap.org/data/2.5/forecast?q=" +
+      "https://api.openweathermap.org/data/2.5/forecast?q=" +
       city +
       "&appid=19a0504277534924261213bbaabf5bbe";
 
